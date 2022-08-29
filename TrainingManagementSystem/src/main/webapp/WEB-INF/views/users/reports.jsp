@@ -31,12 +31,12 @@
 							<form:form class="d-none d-md-flex"
 								action="${baseURL}/users/reports?pageNumber=${pageNumber }&reportDate=${searchParams.date }"
 								method="GET" modelAttribute="searchParams">
-								<td><button type='submit'
-										class='btn btn-square btn-secondary'>
-										<i class='fa fa-search' aria-hidden='true'></i>
-									</button></td>
 								<td><form:input path="date" value="${date }"
-										class="form-control force-white" type="date"></form:input></td>
+										class="form-control force-white text-secondary" type="date"></form:input></td>
+								<td><button type='submit'
+									class='btn btn-square btn-secondary'>
+									<i class='fa fa-search' aria-hidden='true'></i>
+								</button></td>
 							</form:form>
 
 							<td></td>

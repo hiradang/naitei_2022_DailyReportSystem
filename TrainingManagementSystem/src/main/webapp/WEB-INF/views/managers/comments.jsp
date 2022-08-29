@@ -63,7 +63,7 @@
 							method="POST" modelAttribute="comment">
 							<div class="input-group">
 								<form:textarea path="content" placeholder="Nhập bình luận..."
-									class="form-control width100 bg-white"></form:textarea>
+									class="form-control width100 bg-white text-secondary"></form:textarea>
 								<span class="input-group-btn">
 									<button class="btn btn-secondary">Gửi</button>
 								</span>
@@ -80,13 +80,11 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title text-danger" id="exampleModalLabel">Xóa
-							nhân viên khỏi bộ phận?</h5>
+						<h5 class="modal-title text-danger" id="exampleModalLabel">Xóa bình luận</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal"
 							aria-label="Close"></button>
 					</div>
-					<div class="modal-body">Bạn có chắc chắn muốn xóa nhân viên
-						này khỏi bộ phận của mình?</div>
+					<div class="modal-body text-secondary">Bạn có chắc chắn muốn xóa bình luận này?</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary"
 							data-bs-dismiss="modal">Hủy</button>

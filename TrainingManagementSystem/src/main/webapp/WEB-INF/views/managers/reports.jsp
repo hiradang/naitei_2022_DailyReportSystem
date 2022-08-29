@@ -33,24 +33,24 @@
 							<form:form class="d-none d-md-flex"
 								action="${baseURL}/manager/reports?pageNumber=${pageNumber }&textSearch=${searchParams.textSearch }&reportDate=${searchParams.date }"
 								method="GET" modelAttribute="searchParams">
-								<td><button type='submit'
-										class='btn btn-square btn-secondary'>
-										<i class='fa fa-search' aria-hidden='true'></i>
-									</button></td>
 								<td><c:choose>
 										<c:when test="${searchParams.textSearch != ''}">
 											<form:input path="textSearch"
-												class="form-control force-white" type="search"
+												class="form-control force-white text-secondary" type="search"
 												placeholder="${name }" value="${name }"></form:input>
 										</c:when>
 										<c:otherwise>
 											<form:input path="textSearch"
-												class="form-control force-white" type="search"
+												class="form-control force-white text-secondary" type="search"
 												placeholder="Nhập tên..." value="${name }"></form:input>
 										</c:otherwise>
 									</c:choose></td>
 								<td><form:input path="date" value="${date }"
-										class="form-control force-white" type="date"></form:input></td>
+										class="form-control force-white text-secondary" type="date"></form:input></td>
+								<td><button type='submit'
+										class='btn btn-square btn-secondary'>
+										<i class='fa fa-search' aria-hidden='true'></i>
+									</button></td>
 							</form:form>
 
 							<td></td>
@@ -58,7 +58,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-            <c:forEach var="std" items="${reports}">
+						<c:forEach var="std" items="${reports}">
 							<tr>
 								<!-- <td class="table-plus">${std.id}</td> -->
 								<td>${std.user.name}</td>
@@ -66,8 +66,10 @@
 								<td>${std.actualTask}</td>
 								<td>${std.plannedTask}</td>
 								<td>${std.issue}</td>
-								<td><a href="reports/${std.id}" class="btn btn-warning">Bình
-										luận</a></td>
+								<td><a href='reports/${std.id}'><button type='button'
+											class='btn btn-square btn-secondary m-2'>
+											<i class='fa fa-comments' aria-hidden='true'></i>
+										</button></a></td>
 							</tr>
 						</c:forEach>
 

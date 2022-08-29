@@ -23,21 +23,21 @@
 				<form:form action="${baseURL}/users/reports" method="POST"
 					modelAttribute="report" class="report-input">
 					<form:hidden path="id" />
-					<form:label path="date" class="fw-bold mb-2">Ngày báo cáo:</form:label>
+					<form:label path="date" class="fw-bold mb-2 ">Ngày báo cáo:</form:label>
 					<br />
-					<form:input path="date" class="form-control" type="date"></form:input>
+					<form:input path="date" class="form-control text-secondary" type="date"></form:input>
 					<br />
 					<form:label path="actualTask" class="fw-bold mb-2">Bạn đã làm những gì?</form:label>
 					<br />
-					<form:textarea path="actualTask" class="form-control" />
+					<form:textarea path="actualTask" class="form-control text-secondary" />
 					<br />
 					<form:label path="plannedTask" class="fw-bold mb-2">Việc dự định vào ngày tiếp theo:</form:label>
 					<br />
-					<form:textarea path="plannedTask" class="form-control" />
+					<form:textarea path="plannedTask" class="form-control text-secondary" />
 					<br />
 					<form:label path="issue" class="fw-bold mb-2">Vấn đề gặp phải:</form:label>
 					<br />
-					<form:textarea path="issue" class="form-control" />
+					<form:textarea path="issue" class="form-control text-secondary" />
 					<br />
 					<button type="submit"
 						class="btn btn-info d-grid gap-2 col-4 mx-auto mt-5">Tạo</button>

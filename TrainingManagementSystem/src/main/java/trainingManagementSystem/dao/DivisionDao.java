@@ -4,28 +4,19 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-
 import javax.transaction.Transactional;
 
-import org.apache.logging.log4j.spi.LoggerContextKey;
 import org.hibernate.LockMode;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.annotations.OptimisticLock;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import trainingManagementSystem.model.Division;
 import trainingManagementSystem.model.Report;
-import trainingManagementSystem.model.User;
 
 @Component
 public class DivisionDao {

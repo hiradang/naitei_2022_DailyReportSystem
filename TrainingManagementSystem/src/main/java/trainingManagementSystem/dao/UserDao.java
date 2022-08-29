@@ -67,7 +67,7 @@ public class UserDao {
 //		List<User> users = typedQuery.getResultList();
 
 		Query<User> query = session
-				.createNativeQuery("select * from users u where u.divisionId= :divisionId and role=1", User.class);
+				.createNativeQuery("select * from users u where u.divisionId= :divisionId and role=0", User.class);
 		query.setParameter("divisionId", divisionId);
 		List<User> users = query.list();
 		session.close();
@@ -132,7 +132,7 @@ public class UserDao {
 //			TypedQuery<User> typedQuery = session.createQuery(selectQuery);
 //			List<User> users = typedQuery.getResultList();
 
-			Query<User> query = session.createNativeQuery("select * from users u where u.divisionId is null and role=1",
+			Query<User> query = session.createNativeQuery("select * from users u where u.divisionId is null and role=0",
 					User.class);
 			List<User> users = query.list();
 
